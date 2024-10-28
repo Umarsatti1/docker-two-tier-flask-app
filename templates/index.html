@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Board</title>
+</head>
+<body>
+    <h1>Message Board</h1>
+    
+    <!-- Message Submission Form -->
+    <form method="POST" action="/">
+        <label for="message">Enter your message:</label>
+        <input type="text" id="message" name="message" required>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <h2>Messages</h2>
+    <ul>
+        {% for message in messages %}
+            <li>{{ message[0] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
